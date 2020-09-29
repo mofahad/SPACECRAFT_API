@@ -1,0 +1,22 @@
+{% extends "output.html" %}
+{% block body %}
+
+<p><a href = "/probes/">List of All Probes</a></p>
+
+<h3>Data:</h3>
+<ul>
+    {% for probe_name, detail in probe_details.iteritems() %}
+    <li>
+        <h3>
+        <a name = "{{ probe_name }}" href = "/probes/{{ probe_name }}">{{ probe_name }}</a></h3>
+        <ul>
+            {% for param, value in detail.iteritems() %}
+                <li>
+                    <a href = "/probes/{{ probe_name }}/{{ param }}">{{ param }}</a>: {{ value }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+
+</ul>
+{% endblock %}

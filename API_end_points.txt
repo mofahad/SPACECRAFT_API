@@ -1,0 +1,14 @@
+/dsn/mirror.json
+/dsn/probes.json
+/dsn/spaceprobes.json
+
+/distances.json
+
+/planets.json
+
+
+http://127.0.0.1:5000/probes/
+
+http://127.0.0.1:5000/probes/Cassini
+
+http://127.0.0.1:5000/probes/Magellan/target/

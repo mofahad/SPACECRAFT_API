@@ -1,0 +1,44 @@
+#list of active probes
+WIND
+SOHO
+ACE
+STEREO A
+STEREO B
+MESSENGER
+Venus Express
+Akatsuki (PLANET-C)
+2001 Mars Odyssey
+Mars Express
+Mars Reconnaissance Orbiter
+Mars Orbiter Mission
+MAVEN
+Dawn
+Ulysses
+Genesis
+Helios A
+Venera 13
+Venera 14
+Venera 15
+Magellan
+Akatsuki
+Beagle 2
+Emirates Mars Mission
+Venera 16
+Galileo
+Mariner 10
+Sputnik 19
+Venera 1
+Cosmos 27
+Mangalyaan 
+Mars Orbiter Mission 2
+Helios B
+ISEE-3
+Juno
+Cassini
+New Horizons
+Voyager 1
+Voyager 2
+Spitzer Space Telescope
+Kepler
+Herschel
+Gaia
