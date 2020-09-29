@@ -7,7 +7,6 @@ import requests
 from flask import Flask, render_template, redirect, jsonify
 from json import loads, dumps
 from NASA_PROBE_DSN import get_dsn_raw
-#from util import json, jsonp, support_jsonp
 
 
 app = Flask(__name__)
@@ -22,7 +21,7 @@ def initial():
 
 
 @app.route('/dsn/mirror.json')
-# @json
+
 def dsn_mirror():
     """ a json view of the dsn xml feed """
     dsn = loads(r_server.get('dsn_raw_data'))
@@ -31,7 +30,6 @@ def dsn_mirror():
 
 @app.route('/dsn/probes.json')
 @app.route('/dsn/spaceprobes.json')
-# @support_jsonp
 def dsn_by_probe():
     """ dsn data aggregated by space probe """
     dsn_by_probe = loads(r_server.get('dsn_by_probe'))
@@ -41,7 +39,6 @@ def dsn_by_probe():
 
 
 @app.route('/distances.json')
-# @support_jsonp
 def all_probe_distances():
     """
         endpoint to feed the spaceprobes website
@@ -110,7 +107,6 @@ def all_probe_distances():
 
 
 @app.route('/planets.json')
-# @support_jsonp
 def planet_distances():
     """ return current distances from earth for 9 planets """
     meters_per_au = 149597870700
@@ -154,8 +150,6 @@ def guide():
 
 
 @app.route('/probes/<probe>/')
-# @support_jsonp
-# @json
 def detail(probe):
     """ returns list of data we have for this probe from wolfram alpha
         url = /<probe_name>
@@ -166,8 +160,6 @@ def detail(probe):
 
 
 @app.route('/probes/<probe>/<field>/')
-# @support_jsonp
-# @json
 def single_field(probe, field):
     """ returns data for single field
         url = /<probe_name>/<field>
@@ -180,8 +172,6 @@ def single_field(probe, field):
 
 
 @app.route('/probes/')
-# @support_jsonp
-# @json
 def index():
     """ returns list of all space probes in db
         url = /
