@@ -2,7 +2,6 @@
 import os
 import sys
 import redis
-#import logging
 import ephem
 import requests
 from flask import Flask, render_template, redirect, jsonify
